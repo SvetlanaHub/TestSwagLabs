@@ -29,7 +29,7 @@ public class Tests {
     @Order(1)
     @DisplayName("Login")
 
-    public void Login() {
+    public void tesLogin() {
 
         LoginPage.openLoginPage();
         LoginPage.login();
@@ -42,7 +42,7 @@ public class Tests {
     @Order(2)
     @DisplayName("Shopping")
 
-    public void shopping() {
+    public void testShopping() {
 
         LoginPage.openLoginPage();
         LoginPage.login();
@@ -59,7 +59,7 @@ public class Tests {
     @Order(3)
     @DisplayName("Cancellation of purchase")
 
-    public void cancellationOfPurchase() {
+    public void testCancellationOfPurchase() {
 
         LoginPage.openLoginPage();
         LoginPage.login();
@@ -77,7 +77,7 @@ public class Tests {
     @Order(4)
     @DisplayName("Removing all items from the cart")
 
-    public void removingAllItemsFromTheCart() {
+    public void testRemovingAllItemsFromTheCart() {
 
         LoginPage.openLoginPage();
         LoginPage.login();
@@ -92,7 +92,7 @@ public class Tests {
     @Order(5)
     @DisplayName("Сalculation of the total amount of items")
 
-    public void calculationOfTheTotalAmountOfItems() {
+    public void testCalculationOfTheTotalAmountOfItems() {
 
         LoginPage.openLoginPage();
         LoginPage.login();
