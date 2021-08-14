@@ -14,12 +14,7 @@ import static com.codeborne.selenide.Condition.visible;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
-
 public class Tests extends BeforeAfterAll {
-
-    //EventFiringWebDriver driver = new EventFiringWebDriver(new ChromeDriver());
-    //driver.register(new WebDriverLogger());
-
 
     @RegisterExtension
     static ScreenShooterExtension screenshotEmAll = new ScreenShooterExtension(true).to("resources/screenshots");
