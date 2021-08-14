@@ -1,20 +1,28 @@
 package tests;
 
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import com.codeborne.selenide.junit5.ScreenShooterExtension;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import pageObject.*;
+import utils.WebDriverLogger;
+
 import static com.codeborne.selenide.Condition.visible;
 
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
+
 public class Tests extends BeforeAfterAll {
+
+    //EventFiringWebDriver driver = new EventFiringWebDriver(new ChromeDriver());
+    //driver.register(new WebDriverLogger());
+
 
     @RegisterExtension
     static ScreenShooterExtension screenshotEmAll = new ScreenShooterExtension(true).to("resources/screenshots");
-
 
     @Test
     @Order(1)
