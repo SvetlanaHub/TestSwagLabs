@@ -1,6 +1,7 @@
 package pageObject;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -13,7 +14,7 @@ public class ProductsPage {
 
     public static final SelenideElement products = $(".title");
 
-
+    @Step("Add to cart")
     public static void addToCart() {
 
         addToCartBackpack.click();

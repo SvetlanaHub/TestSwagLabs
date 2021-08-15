@@ -1,6 +1,7 @@
 package pageObject;
 
 import com.codeborne.selenide.SelenideElement;
+import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.$;
 
@@ -19,6 +20,7 @@ public class CheckoutInformationPage {
     private static final CharSequence LAST_NAME = ("Shevchenko");
     private static final CharSequence ZIP_POSTAL_CODE = ("256129");
 
+    @Step("Click continue button")
     public static void clickContinueButton() {
 
         firstNameField.sendKeys(FIRST_NAME);

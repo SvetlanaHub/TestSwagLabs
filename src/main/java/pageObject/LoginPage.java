@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import io.qameta.allure.Step;
 
 public class LoginPage extends ProductsPage {
 
@@ -18,6 +19,7 @@ public class LoginPage extends ProductsPage {
     public static final CharSequence USERNAME = ("standard_user");
     public static final CharSequence PASSWORD = ("secret_sauce");
 
+    @Step("Login")
     public static void login() {
 
         usernameField.sendKeys(USERNAME);
@@ -25,7 +27,7 @@ public class LoginPage extends ProductsPage {
         loginButton.click();
 
     }
-
+    @Step("Open login page")
     public static void openLoginPage(){
 
         open("https://www.saucedemo.com/");
