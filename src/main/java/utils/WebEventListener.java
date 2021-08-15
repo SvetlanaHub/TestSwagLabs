@@ -5,8 +5,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 public class WebEventListener implements WebDriverEventListener {
+
+    private static final Logger logger = LogManager.getLogger(WebEventListener.class);
 
     @Override
     public void beforeAlertAccept(WebDriver webDriver) {
@@ -29,28 +33,32 @@ public class WebEventListener implements WebDriverEventListener {
     }
 
     public void beforeNavigateTo(String url, WebDriver driver) {
-        System.out.println("Before navigating to: '" + url + "'");
+        logger.info("Navigating to: '" + url + "'");
     }
 
     public void afterNavigateTo(String url, WebDriver driver) {
-        System.out.println("Navigated to:'" + url + "'");
+        logger.info("Navigated to:'" + url + "'");
     }
 
     public void beforeChangeValueOf(WebElement element, WebDriver driver) {
-        System.out.println("Value of the:" + element.toString()
-                + " before any changes made");
+        logger.info("Entering value" + element.toString()
+                + "in the field input");
+
     }
 
     public void afterChangeValueOf(WebElement element, WebDriver driver) {
-        System.out.println("Element value changed to: " + element.toString());
+        logger.info("Element value changed to: " + element.toString());
+
     }
 
     public void beforeClickOn(WebElement element, WebDriver driver) {
-        System.out.println("Trying to click on: " + element.toString());
+        logger.info("Clicking on button: " + element.toString());
+
     }
 
     public void afterClickOn(WebElement element, WebDriver driver) {
-        System.out.println("Clicked on: " + element.toString());
+        logger.info("Clicked on: " + element.toString());
+
     }
 
     @Override

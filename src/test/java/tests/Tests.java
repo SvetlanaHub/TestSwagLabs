@@ -3,9 +3,6 @@ import com.codeborne.selenide.junit5.ScreenShooterExtension;
 import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import pageObject.*;
-import utils.WebEventListener;
-import org.apache.log4j.Logger;
-
 import static com.codeborne.selenide.Condition.visible;
 
 
@@ -13,7 +10,6 @@ import static com.codeborne.selenide.Condition.visible;
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 
 public class Tests extends BeforeAfterAll {
-
 
     @RegisterExtension
     static ScreenShooterExtension screenshotEmAll = new ScreenShooterExtension(true).to("resources/screenshots");
