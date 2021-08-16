@@ -4,6 +4,7 @@ import org.junit.jupiter.api.*;
 import org.junit.jupiter.api.extension.RegisterExtension;
 import pageObject.*;
 import static com.codeborne.selenide.Condition.visible;
+import io.qameta.allure.*;
 
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -14,6 +15,11 @@ public class Tests extends BeforeAfterAll {
     @RegisterExtension
     static ScreenShooterExtension screenshotEmAll = new ScreenShooterExtension(true).to("resources/screenshots");
 
+
+    @Description("Login test with a valid name and password")
+    @Severity(SeverityLevel.BLOCKER)
+    @Feature("Blocker")
+    @Link("https://www.saucedemo.com/")
     @Test
     @Order(1)
     @DisplayName("Login")
@@ -26,6 +32,10 @@ public class Tests extends BeforeAfterAll {
 
     }
 
+    @Description("Verifying that user can buy items")
+    @Severity(SeverityLevel.BLOCKER)
+    @Feature("Blocker")
+    @Link("https://www.saucedemo.com/")
     @Test
     @Order(2)
     @DisplayName("Shopping")
@@ -41,6 +51,7 @@ public class Tests extends BeforeAfterAll {
         CheckoutCompletePage.thankYouOrderMessage.shouldBe(visible);
 
     }
+
 
     @Test
     @Order(3)
